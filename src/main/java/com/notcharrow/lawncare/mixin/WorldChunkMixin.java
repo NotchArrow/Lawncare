@@ -1,10 +1,7 @@
 package com.notcharrow.lawncare.mixin;
 
 import com.notcharrow.lawncare.config.ConfigManager;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerBlock;
+import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -63,7 +60,7 @@ public class WorldChunkMixin {
 						world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL);
 					}  else if (block == Blocks.DEAD_BUSH && Math.random() > (ConfigManager.config.deadBushes * .01)) {
 						world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL);
-					} else if (block instanceof FlowerBlock && Math.random() > (ConfigManager.config.flowers * .01)) {
+					} else if ((block instanceof FlowerBlock || block instanceof TallFlowerBlock) && Math.random() > (ConfigManager.config.flowers * .01)) {
 						world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL);
 					}
 					else if (block == Blocks.MOSS_CARPET && Math.random() > (ConfigManager.config.mossCarpet * .01)) {
