@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "lawncare",
+  "version": "${version}",
+  "name": "Lawncare",
+  "description": "Reduce or remove the generation of natural blocks like leaf litter and grass.",
+  "authors": [
+    "NotchArrow"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/lawncare",
+    "sources": "https://github.com/NotchArrow/Lawncare/",
+    "discord": "https://discord.gg/ZCaGkZeb4C"
+  },
+  "license": "MIT",
+  "icon": "assets/lawncare/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.notcharrow.lawncare.Lawncare"
+    ],
+    "modmenu": [
+      "com.notcharrow.lawncare.modmenu.LawncareModMenu"
+    ]
+  },
+  "mixins": [
+    "lawncare.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "cloth-config": "*",
+    "modmenu": "*"
+  }
+}
