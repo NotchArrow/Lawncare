@@ -27,12 +27,6 @@ public class LawncareModMenu implements ModMenuApi {
 		ConfigCategory general = builder.getOrCreateCategory(Text.of("Block Spawn Chances"));
 		ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
-		addPercentSlider(entryBuilder, general, "Wildflowers", "Chance for wildflowers to generate",
-				ConfigManager.config.wildflowers, v -> ConfigManager.config.wildflowers = v);
-
-		addPercentSlider(entryBuilder, general, "Leaf Litter", "Chance for leaf litter to generate",
-				ConfigManager.config.leafLitter, v -> ConfigManager.config.leafLitter = v);
-
 		addPercentSlider(entryBuilder, general, "Pink Petals", "Chance for pink petals to generate",
 				ConfigManager.config.pinkPetals, v -> ConfigManager.config.pinkPetals = v);
 
@@ -42,12 +36,6 @@ public class LawncareModMenu implements ModMenuApi {
 
 		addPercentSlider(entryBuilder, general, "Tall Grass", "Chance for tall grass to generate",
 				ConfigManager.config.tallGrass, v -> ConfigManager.config.tallGrass = v);
-
-		addPercentSlider(entryBuilder, general, "Short Dry Grass", "Chance for short dry grass to generate",
-				ConfigManager.config.shortDryGrass, v -> ConfigManager.config.shortDryGrass = v);
-
-		addPercentSlider(entryBuilder, general, "Tall Dry Grass", "Chance for short dry grass to generate",
-				ConfigManager.config.tallDryGrass, v -> ConfigManager.config.tallDryGrass = v);
 
 		addPercentSlider(entryBuilder, general, "Short Ferns", "Chance for short ferns to generate",
 				ConfigManager.config.shortFerns, v -> ConfigManager.config.shortFerns = v);
@@ -60,13 +48,6 @@ public class LawncareModMenu implements ModMenuApi {
 
 		addPercentSlider(entryBuilder, general, "Tall Seagrass", "Chance for tall seagrass to generate",
 				ConfigManager.config.tallSeagrass, v -> ConfigManager.config.tallSeagrass = v);
-
-
-		addPercentSlider(entryBuilder, general, "Bushes", "Chance for bushes to generate",
-				ConfigManager.config.bushes, v -> ConfigManager.config.bushes = v);
-
-		addPercentSlider(entryBuilder, general, "Firefly Bushes", "Chance for firefly bushes to generate",
-				ConfigManager.config.fireflyBushes, v -> ConfigManager.config.fireflyBushes = v);
 
 		addPercentSlider(entryBuilder, general, "Dead Bushes", "Chance for dead bushes to generate",
 				ConfigManager.config.deadBushes, v -> ConfigManager.config.deadBushes = v);
